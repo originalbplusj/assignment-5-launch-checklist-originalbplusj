@@ -16,7 +16,7 @@ catch (error) { }
 window.addEventListener("load", function () {
 
 
-
+    this.document.getElementById("faultyItems").style.visibility = "hidden";
 
     let testForm = document.querySelector("form");
     testForm.addEventListener("submit", function (event) {

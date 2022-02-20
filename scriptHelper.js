@@ -21,10 +21,10 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-    let numberInput = Number(testInput);
-    if (numberInput === "") {
+
+    if (testInput === "") {
         return "Empty";
-    } else if (isNaN(numberInput) === true) {
+    } else if (isNaN(testInput) === true) {
         return "Not a Number";
     } else {
         return "Is a Number";
@@ -104,8 +104,11 @@ function pickPlanet(planets) {
     return planets[index];
 }
 
-module.exports.addDestinationInfo = addDestinationInfo;
-module.exports.validateInput = validateInput;
-module.exports.formSubmission = formSubmission;
-module.exports.pickPlanet = pickPlanet;
-module.exports.myFetch = myFetch;
+try {
+    module.exports.addDestinationInfo = addDestinationInfo;
+    module.exports.validateInput = validateInput;
+    module.exports.formSubmission = formSubmission;
+    module.exports.pickPlanet = pickPlanet;
+    module.exports.myFetch = myFetch;
+}
+catch (error) { }

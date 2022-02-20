@@ -1,5 +1,7 @@
 // Write your helper functions here!
-require('isomorphic-fetch');
+try { require('isomorphic-fetch'); }
+catch (error) { }
+
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     // Here is the HTML formatting for our mission target div.
@@ -40,11 +42,14 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
 
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-        alert("All fields are required!");
+        try { alert("All fields are required!"); }
+        catch (error) { }
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number") {
-        alert("Make sure to enter valid information for each field!");
+        try { alert("Make sure to enter valid information for each field!"); }
+        catch (error) { }
     } else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
-        alert("Make sure to enter valid information for each field!");
+        try { alert("Make sure to enter valid information for each field!"); }
+        catch (error) { }
     } else {
         faultyItemsList.style.visibility = "visible";
         pilotStatus.innerHTML = `Pilot ${pilot} Ready`;

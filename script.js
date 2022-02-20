@@ -1,12 +1,15 @@
-//const { validateInput } = require("./scriptHelper");
+try {
+    const { validateInput } = require("./scriptHelper");
 
-//const { pickPlanet } = require("./scriptHelper");
+    const { pickPlanet } = require("./scriptHelper");
 
-//const { myFetch } = require("./scriptHelper");
+    const { myFetch } = require("./scriptHelper");
 
-//const { pickPlanet, addDestinationInfo } = require("./scriptHelper");
+    const { pickPlanet, addDestinationInfo } = require("./scriptHelper");
 
-//const { formSubmission } = require("./scriptHelper");
+    const { formSubmission } = require("./scriptHelper");
+}
+catch (error) { }
 
 
 
